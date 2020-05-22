@@ -86,3 +86,41 @@ FOREIGN KEY ("fishing_spot_id")
   [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6319914161703022440)[0m
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6319914161703022440)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFish (20200522183532)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "fish" ("id" bigserial primary key, "species" character varying, "description" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200522183532"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateFishSpots (20200522183648)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "fish_spots" ("id" bigserial primary key, "fish_id" bigint NOT NULL, "fishing_spot_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_6c453b22f8"
+FOREIGN KEY ("fish_id")
+  REFERENCES "fish" ("id")
+, CONSTRAINT "fk_rails_56fd87650c"
+FOREIGN KEY ("fishing_spot_id")
+  REFERENCES "fishing_spots" ("id")
+)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_fish_spots_on_fish_id" ON "fish_spots"  ("fish_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_fish_spots_on_fishing_spot_id" ON "fish_spots"  ("fishing_spot_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200522183648"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6319914161703022440)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFish Create (0.6ms)[0m  [1m[32mINSERT INTO "fish" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-05-22 19:48:18.898024"], ["updated_at", "2020-05-22 19:48:18.898024"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFishingSpot Load (0.4ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" ORDER BY "fishing_spots"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFishingSpot Load (0.3ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" ORDER BY "fishing_spots"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFishingSpot Load (0.3ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" ORDER BY "fishing_spots"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFish Load (0.2ms)[0m  [1m[34mSELECT "fish".* FROM "fish" WHERE "fish"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFishingSpot Load (0.2ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" WHERE "fishing_spots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFishSpot Create (1.0ms)[0m  [1m[32mINSERT INTO "fish_spots" ("fish_id", "fishing_spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["fish_id", 1], ["fishing_spot_id", 1], ["created_at", "2020-05-22 19:50:06.621979"], ["updated_at", "2020-05-22 19:50:06.621979"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFishingSpot Load (0.4ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1 LIMIT $2[0m  [["fish_id", 1], ["LIMIT", 11]]
+  [1m[36mFishSpot Load (0.2ms)[0m  [1m[34mSELECT "fish_spots".* FROM "fish_spots" WHERE "fish_spots"."fish_id" = $1 LIMIT $2[0m  [["fish_id", 1], ["LIMIT", 11]]
+  [1m[36mFishingSpot Load (0.3ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" ORDER BY "fishing_spots"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFish Load (0.4ms)[0m  [1m[34mSELECT "fish".* FROM "fish" INNER JOIN "fish_spots" ON "fish"."id" = "fish_spots"."fish_id" WHERE "fish_spots"."fishing_spot_id" = $1 LIMIT $2[0m  [["fishing_spot_id", 1], ["LIMIT", 11]]
