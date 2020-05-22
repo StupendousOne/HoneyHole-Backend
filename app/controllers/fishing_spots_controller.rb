@@ -1,0 +1,2 @@
+class FishingSpotsController < ApplicationController
+end
