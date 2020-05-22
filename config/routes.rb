@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :fish_spots
+  resources :fish
   resources :reviews
   resources :favorites
   resources :fishing_spots

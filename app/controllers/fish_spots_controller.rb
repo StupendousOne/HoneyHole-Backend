@@ -1,0 +1,2 @@
+class FishSpotsController < ApplicationController
+end

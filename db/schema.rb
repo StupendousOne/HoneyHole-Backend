@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_22_183058) do
+ActiveRecord::Schema.define(version: 2020_05_22_183648) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,22 @@ ActiveRecord::Schema.define(version: 2020_05_22_183058) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["fishing_spot_id"], name: "index_favorites_on_fishing_spot_id"
     t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
+
+  create_table "fish", force: :cascade do |t|
+    t.string "species"
+    t.string "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "fish_spots", force: :cascade do |t|
+    t.bigint "fish_id", null: false
+    t.bigint "fishing_spot_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["fish_id"], name: "index_fish_spots_on_fish_id"
+    t.index ["fishing_spot_id"], name: "index_fish_spots_on_fishing_spot_id"
   end
 
   create_table "fishing_spots", force: :cascade do |t|
@@ -58,6 +74,8 @@ ActiveRecord::Schema.define(version: 2020_05_22_183058) do
 
   add_foreign_key "favorites", "fishing_spots"
   add_foreign_key "favorites", "users"
+  add_foreign_key "fish_spots", "fish"
+  add_foreign_key "fish_spots", "fishing_spots"
   add_foreign_key "fishing_spots", "users"
   add_foreign_key "reviews", "fishing_spots"
   add_foreign_key "reviews", "users"
