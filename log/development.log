@@ -819,3 +819,680 @@ FOREIGN KEY ("fishing_spot_id")
   [1m[36mFish Create (0.2ms)[0m  [1m[32mINSERT INTO "fish" ("species", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["species", "Whitley's sergeant"], ["description", "Generally live in relatively shallow water along the outer periphery of individual reef complexes.  Feeding aggregations of a hundred or more individuals are often seen swimming high above the substratum.  Oviparous, distinct pairing during breeding (Ref. 205).  Eggs are demersal and adhere to the substrate (Ref. 205).  Males guard and aerate the eggs (Ref. 205)."], ["created_at", "2020-05-23 17:39:47.050263"], ["updated_at", "2020-05-23 17:39:47.050263"]]
   [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mFish Load (0.3ms)[0m  [1m[34mSELECT "fish".* FROM "fish" ORDER BY "fish"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6319914161703022440)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ReviseSpotLocationColumns (20200523183833)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.7ms)[0m  [1m[35mALTER TABLE "fishing_spots" ALTER COLUMN "location" TYPE longtide[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6319914161703022440)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6319914161703022440)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ReviseSpotLocationColumns (20200523183833)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "fishing_spots" RENAME COLUMN "location" TO "longitude"[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200523183833"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateLatitudeColumnOnFishingSpots (20200523184303)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.1ms)[0m  [1m[35mALTER TABLE "fishing_spots" ADD "latitude" character varying[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200523184303"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6319914161703022440)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (1.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 82]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 83]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 84]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 85]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 86]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 87]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 88]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 89]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 90]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 91]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 92]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 93]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 94]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 95]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 96]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 97]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 98]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 99]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 100]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 101]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6319914161703022440)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeDescColumnNameOnFishingSpots (20200523193121)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "fishing_spots" ALTER COLUMN "description" TYPE public_access[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6319914161703022440)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6319914161703022440)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeDescColumnNameOnFishingSpots (20200523193121)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "fishing_spots" RENAME COLUMN "description" TO "public_access"[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200523193121"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6319914161703022440)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6319914161703022440)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddSiteInfoColumnToFishingSpots (20200523193650)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "fishing_spots" ADD "site_info" character varying[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200523193650"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6319914161703022440)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mFishingSpot Load (0.3ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" ORDER BY "fishing_spots"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mFishingSpot Load (0.4ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mFishingSpot Load (0.4ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mFishingSpot Load (0.4ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots"[0m
+  [1m[36mFishingSpot Load (0.4ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mFishingSpot Load (0.4ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Mikel Strosin DVM"], ["bio", "The mind is not a vessel to be filled but a fire to be kindled."], ["username", "roosevelt"], ["email", "aisha.kozey@adams.co"], ["created_at", "2020-05-23 19:49:26.138125"], ["updated_at", "2020-05-23 19:49:26.138125"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Lesley Strosin"], ["bio", "The mind is not a vessel to be filled but a fire to be kindled."], ["username", "barton"], ["email", "lane.hermann@kaulke.name"], ["created_at", "2020-05-23 19:49:26.142581"], ["updated_at", "2020-05-23 19:49:26.142581"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Mrs. Gita Pfeffer"], ["bio", "Philosophy is the highest music."], ["username", "vasiliki"], ["email", "vida@thiel.com"], ["created_at", "2020-05-23 19:49:26.145846"], ["updated_at", "2020-05-23 19:49:26.145846"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Chery Dietrich"], ["bio", "Good habits formed at youth make all the difference."], ["username", "antonio_oconnell"], ["email", "hunter@effertzreichert.org"], ["created_at", "2020-05-23 19:49:26.149027"], ["updated_at", "2020-05-23 19:49:26.149027"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Adan Smitham DDS"], ["bio", "Beware the barrenness of a busy life."], ["username", "amiee.breitenberg"], ["email", "shayna@gerhold.org"], ["created_at", "2020-05-23 19:49:26.152256"], ["updated_at", "2020-05-23 19:49:26.152256"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Larry Feest DVM"], ["bio", "It is impossible to begin to learn that which one thinks one already knows."], ["username", "kevin"], ["email", "arnulfo_daniel@kutch.net"], ["created_at", "2020-05-23 19:49:26.155492"], ["updated_at", "2020-05-23 19:49:26.155492"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Timothy Douglas"], ["bio", "It is impossible to begin to learn that which one thinks one already knows."], ["username", "theodora"], ["email", "mitchel@walkerkertzmann.co"], ["created_at", "2020-05-23 19:49:26.158634"], ["updated_at", "2020-05-23 19:49:26.158634"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Mr. Dannie Denesik"], ["bio", "Rhetoric is the art of ruling the minds of men."], ["username", "kimberly"], ["email", "so@walter.net"], ["created_at", "2020-05-23 19:49:26.161760"], ["updated_at", "2020-05-23 19:49:26.161760"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Aleshia Connelly"], ["bio", "Good habits formed at youth make all the difference."], ["username", "sherie.parker"], ["email", "mignon.ohara@kuvalis.io"], ["created_at", "2020-05-23 19:49:26.164974"], ["updated_at", "2020-05-23 19:49:26.164974"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Kevin Hilpert MD"], ["bio", "The unexamined life is not worth living."], ["username", "shay_turner"], ["email", "bennett_pollich@wuckert.info"], ["created_at", "2020-05-23 19:49:26.168167"], ["updated_at", "2020-05-23 19:49:26.168167"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Young O'Keefe"], ["bio", "Rhetoric is the art of ruling the minds of men."], ["username", "vallie_stokes"], ["email", "alfredia_baumbach@sauermccullough.info"], ["created_at", "2020-05-23 19:49:26.171033"], ["updated_at", "2020-05-23 19:49:26.171033"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Sammie Green"], ["bio", "Know how to listen, and you will profit even from those who talk badly."], ["username", "minh"], ["email", "rusty@murray.io"], ["created_at", "2020-05-23 19:49:26.173756"], ["updated_at", "2020-05-23 19:49:26.173756"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Sammy Von IV"], ["bio", "Control thy passions lest they take vengence on thee."], ["username", "jesusa"], ["email", "jonathon@hauckbarrows.com"], ["created_at", "2020-05-23 19:49:26.176444"], ["updated_at", "2020-05-23 19:49:26.176444"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Peggie Wintheiser I"], ["bio", "A few vices are sufficient to darken many virtues."], ["username", "connie"], ["email", "corey@kutch.info"], ["created_at", "2020-05-23 19:49:26.179149"], ["updated_at", "2020-05-23 19:49:26.179149"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Mrs. Toshiko Grimes"], ["bio", "Quality is not an act, it is a habit."], ["username", "ellis"], ["email", "dylan@gutkowski.info"], ["created_at", "2020-05-23 19:49:26.181791"], ["updated_at", "2020-05-23 19:49:26.181791"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Terrell Klocko"], ["bio", "There was never a genius without a tincture of madness."], ["username", "carry"], ["email", "ervin.mayert@hoeger.co"], ["created_at", "2020-05-23 19:49:26.192793"], ["updated_at", "2020-05-23 19:49:26.192793"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Buford White"], ["bio", "Control thy passions lest they take vengence on thee."], ["username", "barton"], ["email", "jami.hermiston@faheyjohns.org"], ["created_at", "2020-05-23 19:49:26.196134"], ["updated_at", "2020-05-23 19:49:26.196134"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Yon Jakubowski"], ["bio", "Philosophy is the highest music."], ["username", "bonnie"], ["email", "laverne_nicolas@goldner.net"], ["created_at", "2020-05-23 19:49:26.199263"], ["updated_at", "2020-05-23 19:49:26.199263"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Amberly Nikolaus"], ["bio", "Pleasure in the job puts perfection in the work."], ["username", "billie"], ["email", "joseph_pacocha@hodkiewicz.co"], ["created_at", "2020-05-23 19:49:26.202329"], ["updated_at", "2020-05-23 19:49:26.202329"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Jarrod Olson"], ["bio", "Dignity does not consist in possessing honors, but in deserving them."], ["username", "merlin"], ["email", "kaley_beier@robertscummerata.biz"], ["created_at", "2020-05-23 19:49:26.205279"], ["updated_at", "2020-05-23 19:49:26.205279"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mFishingSpot Load (0.4ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (1.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 102]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 103]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 104]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 105]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 106]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 107]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 108]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 109]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 110]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 111]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 112]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 113]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 114]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 115]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 116]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 117]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 118]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 119]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 120]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 121]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Queen Harvey"], ["bio", "Rhetoric is the art of ruling the minds of men."], ["username", "loren"], ["email", "erick@wiza.name"], ["created_at", "2020-05-24 00:36:34.312371"], ["updated_at", "2020-05-24 00:36:34.312371"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bruce Reichel"], ["bio", "There was never a genius without a tincture of madness."], ["username", "alec.hudson"], ["email", "garry@schmittheidenreich.co"], ["created_at", "2020-05-24 00:36:34.316687"], ["updated_at", "2020-05-24 00:36:34.316687"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Danilo Schroeder Sr."], ["bio", "Quality is not an act, it is a habit."], ["username", "fay_mohr"], ["email", "collen@murray.io"], ["created_at", "2020-05-24 00:36:34.319961"], ["updated_at", "2020-05-24 00:36:34.319961"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Art Balistreri"], ["bio", "Love is composed of a single soul inhabiting two bodies."], ["username", "george"], ["email", "jody.treutel@mannfadel.co"], ["created_at", "2020-05-24 00:36:34.322998"], ["updated_at", "2020-05-24 00:36:34.322998"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Rudy Gusikowski"], ["bio", "The unexamined life is not worth living."], ["username", "jamaal"], ["email", "royce.spencer@gulgowski.biz"], ["created_at", "2020-05-24 00:36:34.326050"], ["updated_at", "2020-05-24 00:36:34.326050"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Alfonzo Kuhic"], ["bio", "Only the educated are free."], ["username", "monique.mosciski"], ["email", "eura.turcotte@yost.name"], ["created_at", "2020-05-24 00:36:34.329131"], ["updated_at", "2020-05-24 00:36:34.329131"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Odell Buckridge"], ["bio", "It is impossible to begin to learn that which one thinks one already knows."], ["username", "katelynn"], ["email", "danelle.stroman@koeppwilkinson.info"], ["created_at", "2020-05-24 00:36:34.332188"], ["updated_at", "2020-05-24 00:36:34.332188"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Nolan Deckow"], ["bio", "The virtue of justice consists in moderation, as regulated by wisdom."], ["username", "jackson"], ["email", "my@prohaska.name"], ["created_at", "2020-05-24 00:36:34.335261"], ["updated_at", "2020-05-24 00:36:34.335261"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Arlie Bernhard"], ["bio", "Control thy passions lest they take vengence on thee."], ["username", "tomas_towne"], ["email", "lindsay@feestwisozk.io"], ["created_at", "2020-05-24 00:36:34.338040"], ["updated_at", "2020-05-24 00:36:34.338040"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Delmer McCullough"], ["bio", "Only the educated are free."], ["username", "heike"], ["email", "moshe@hackett.info"], ["created_at", "2020-05-24 00:36:34.340635"], ["updated_at", "2020-05-24 00:36:34.340635"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Kerstin Zieme"], ["bio", "It is impossible to begin to learn that which one thinks one already knows."], ["username", "ashleigh"], ["email", "cheri@torp.info"], ["created_at", "2020-05-24 00:36:34.343326"], ["updated_at", "2020-05-24 00:36:34.343326"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Kermit Robel"], ["bio", "Beware the barrenness of a busy life."], ["username", "sterling"], ["email", "holli_bartell@kuvalis.com"], ["created_at", "2020-05-24 00:36:34.345924"], ["updated_at", "2020-05-24 00:36:34.345924"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Shelton Fadel"], ["bio", "It is impossible to begin to learn that which one thinks one already knows."], ["username", "brad"], ["email", "shante@kuhnwaters.biz"], ["created_at", "2020-05-24 00:36:34.348506"], ["updated_at", "2020-05-24 00:36:34.348506"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Dr. Treva Walsh"], ["bio", "It is impossible to begin to learn that which one thinks one already knows."], ["username", "kelly"], ["email", "dominique.beatty@nikolaus.info"], ["created_at", "2020-05-24 00:36:34.351220"], ["updated_at", "2020-05-24 00:36:34.351220"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Maida Veum DVM"], ["bio", "Pleasure in the job puts perfection in the work."], ["username", "kennith_miller"], ["email", "cruz@dubuque.co"], ["created_at", "2020-05-24 00:36:34.353863"], ["updated_at", "2020-05-24 00:36:34.353863"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Don Lebsack"], ["bio", "Philosophy is the highest music."], ["username", "illa"], ["email", "ward@gusikowski.io"], ["created_at", "2020-05-24 00:36:34.356429"], ["updated_at", "2020-05-24 00:36:34.356429"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Jimmie Predovic"], ["bio", "Pleasure in the job puts perfection in the work."], ["username", "casey"], ["email", "avril.gaylord@romaguera.io"], ["created_at", "2020-05-24 00:36:34.359024"], ["updated_at", "2020-05-24 00:36:34.359024"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Fanny Brakus"], ["bio", "Most people would rather give than get affection."], ["username", "dannette_wiza"], ["email", "mac@padberg.com"], ["created_at", "2020-05-24 00:36:34.361691"], ["updated_at", "2020-05-24 00:36:34.361691"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Hal Lowe"], ["bio", "The unexamined life is not worth living."], ["username", "cayla"], ["email", "xuan.little@dietrich.biz"], ["created_at", "2020-05-24 00:36:34.364332"], ["updated_at", "2020-05-24 00:36:34.364332"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Becky Ullrich"], ["bio", "Love is composed of a single soul inhabiting two bodies."], ["username", "matthew.gleichner"], ["email", "madelaine@strosin.io"], ["created_at", "2020-05-24 00:36:34.366972"], ["updated_at", "2020-05-24 00:36:34.366972"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mFishingSpot Load (0.4ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (1.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 122]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 123]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 124]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 125]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 126]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 127]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 128]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 129]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 130]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 131]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 132]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 133]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 134]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 135]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 136]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 137]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 138]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 139]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 140]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 141]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mFishingSpot Load (0.5ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tobias Willms V"], ["bio", "It is impossible to begin to learn that which one thinks one already knows."], ["username", "ronald.powlowski"], ["email", "maya.heidenreich@beerrogahn.name"], ["created_at", "2020-05-24 00:38:14.161305"], ["updated_at", "2020-05-24 00:38:14.161305"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Charline Blanda"], ["bio", "A few vices are sufficient to darken many virtues."], ["username", "alonzo_osinski"], ["email", "janise@oberbrunner.io"], ["created_at", "2020-05-24 00:38:14.166380"], ["updated_at", "2020-05-24 00:38:14.166380"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Francis Dickens"], ["bio", "Dignity does not consist in possessing honors, but in deserving them."], ["username", "shad"], ["email", "dominick@dietrich.biz"], ["created_at", "2020-05-24 00:38:14.170391"], ["updated_at", "2020-05-24 00:38:14.170391"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Miss Antione Greenholt"], ["bio", "It's not what happens to you, but how you react to it that matters."], ["username", "frank.becker"], ["email", "frankie_ruecker@feilparker.com"], ["created_at", "2020-05-24 00:38:14.173545"], ["updated_at", "2020-05-24 00:38:14.173545"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Mrs. Robin Funk"], ["bio", "It is impossible to begin to learn that which one thinks one already knows."], ["username", "richard"], ["email", "lenita@grant.biz"], ["created_at", "2020-05-24 00:38:14.176683"], ["updated_at", "2020-05-24 00:38:14.176683"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Loreen Waelchi"], ["bio", "Good habits formed at youth make all the difference."], ["username", "emmanuel_sipes"], ["email", "shane@bode.name"], ["created_at", "2020-05-24 00:38:14.179825"], ["updated_at", "2020-05-24 00:38:14.179825"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Rosana Roberts"], ["bio", "There was never a genius without a tincture of madness."], ["username", "nathalie"], ["email", "claude@lednermurphy.com"], ["created_at", "2020-05-24 00:38:14.183049"], ["updated_at", "2020-05-24 00:38:14.183049"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Aldo Kertzmann"], ["bio", "Only the educated are free."], ["username", "bruna_leuschke"], ["email", "brook_kuhic@mcclure.name"], ["created_at", "2020-05-24 00:38:14.186220"], ["updated_at", "2020-05-24 00:38:14.186220"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Conception Grimes"], ["bio", "It's not what happens to you, but how you react to it that matters."], ["username", "gino"], ["email", "reinaldo@fadelbode.io"], ["created_at", "2020-05-24 00:38:14.189366"], ["updated_at", "2020-05-24 00:38:14.189366"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Johana Harber V"], ["bio", "Philosophy is the highest music."], ["username", "shaunte.rogahn"], ["email", "teri@friesenarmstrong.name"], ["created_at", "2020-05-24 00:38:14.192535"], ["updated_at", "2020-05-24 00:38:14.192535"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Elwood O'Kon MD"], ["bio", "It is impossible to begin to learn that which one thinks one already knows."], ["username", "michel.koepp"], ["email", "hannah_kuhlman@bradtke.com"], ["created_at", "2020-05-24 00:38:14.195505"], ["updated_at", "2020-05-24 00:38:14.195505"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Joan Sanford V"], ["bio", "The secret to humor is surprise."], ["username", "roger.jenkins"], ["email", "allen_heidenreich@kuphal.org"], ["created_at", "2020-05-24 00:38:14.198580"], ["updated_at", "2020-05-24 00:38:14.198580"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Damien Leffler"], ["bio", "It's not what happens to you, but how you react to it that matters."], ["username", "tona.keeling"], ["email", "noble_bednar@stokes.co"], ["created_at", "2020-05-24 00:38:14.201252"], ["updated_at", "2020-05-24 00:38:14.201252"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Francis Marquardt Jr."], ["bio", "Good habits formed at youth make all the difference."], ["username", "birgit.spencer"], ["email", "epifania.hermann@greenko.co"], ["created_at", "2020-05-24 00:38:14.203994"], ["updated_at", "2020-05-24 00:38:14.203994"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Louann Bruen"], ["bio", "Only the educated are free."], ["username", "verdell"], ["email", "filiberto@okuneva.biz"], ["created_at", "2020-05-24 00:38:14.206681"], ["updated_at", "2020-05-24 00:38:14.206681"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Johnnie Stiedemann"], ["bio", "There was never a genius without a tincture of madness."], ["username", "kent"], ["email", "randell.braun@jacobiroberts.info"], ["created_at", "2020-05-24 00:38:14.217658"], ["updated_at", "2020-05-24 00:38:14.217658"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Chelsey Bauch"], ["bio", "A few vices are sufficient to darken many virtues."], ["username", "houston"], ["email", "mallory@torphy.org"], ["created_at", "2020-05-24 00:38:14.220916"], ["updated_at", "2020-05-24 00:38:14.220916"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Magdalen Daniel DVM"], ["bio", "The secret to humor is surprise."], ["username", "leeanne"], ["email", "preston_schiller@johnson.io"], ["created_at", "2020-05-24 00:38:14.223961"], ["updated_at", "2020-05-24 00:38:14.223961"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Shane Conroy"], ["bio", "Most people would rather give than get affection."], ["username", "danica.bartell"], ["email", "lyndon_schuppe@daughertyglover.name"], ["created_at", "2020-05-24 00:38:14.226980"], ["updated_at", "2020-05-24 00:38:14.226980"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Marget Baumbach V"], ["bio", "It is impossible to begin to learn that which one thinks one already knows."], ["username", "hobert.orn"], ["email", "charlette@schadenstamm.org"], ["created_at", "2020-05-24 00:38:14.229971"], ["updated_at", "2020-05-24 00:38:14.229971"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mFishingSpot Load (0.4ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (1.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 142]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 143]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 144]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 145]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 146]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 147]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 148]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 149]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 150]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 151]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 152]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 153]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 154]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 155]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 156]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 157]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 158]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 159]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 160]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 161]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mFishingSpot Load (0.4ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Gregorio Connelly"], ["bio", "Only the educated are free."], ["username", "cheyenne.mohr"], ["email", "kimberlie@conn.info"], ["created_at", "2020-05-24 00:39:36.816190"], ["updated_at", "2020-05-24 00:39:36.816190"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Pam Blick DDS"], ["bio", "The mind is not a vessel to be filled but a fire to be kindled."], ["username", "winfred_stokes"], ["email", "lorna@doyle.info"], ["created_at", "2020-05-24 00:39:36.820558"], ["updated_at", "2020-05-24 00:39:36.820558"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Alfonzo Macejkovic"], ["bio", "A few vices are sufficient to darken many virtues."], ["username", "melba.wolff"], ["email", "jan@hegmann.co"], ["created_at", "2020-05-24 00:39:36.823810"], ["updated_at", "2020-05-24 00:39:36.823810"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Adalberto Rutherford"], ["bio", "Good habits formed at youth make all the difference."], ["username", "nida_weimann"], ["email", "rosario@bashirianlindgren.org"], ["created_at", "2020-05-24 00:39:36.826915"], ["updated_at", "2020-05-24 00:39:36.826915"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Todd Oberbrunner"], ["bio", "Philosophy is the highest music."], ["username", "bernie_hyatt"], ["email", "jamaal@beier.biz"], ["created_at", "2020-05-24 00:39:36.830022"], ["updated_at", "2020-05-24 00:39:36.830022"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Richard Herzog"], ["bio", "The unexamined life is not worth living."], ["username", "adan.koelpin"], ["email", "jani.harris@wilkinson.biz"], ["created_at", "2020-05-24 00:39:36.833077"], ["updated_at", "2020-05-24 00:39:36.833077"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Celine Moen"], ["bio", "Dignity does not consist in possessing honors, but in deserving them."], ["username", "tyra"], ["email", "serina.hoeger@west.com"], ["created_at", "2020-05-24 00:39:36.836134"], ["updated_at", "2020-05-24 00:39:36.836134"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Homer Franecki"], ["bio", "Quality is not an act, it is a habit."], ["username", "lincoln"], ["email", "sean@koboyle.net"], ["created_at", "2020-05-24 00:39:36.839243"], ["updated_at", "2020-05-24 00:39:36.839243"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ruben Blanda"], ["bio", "The secret to humor is surprise."], ["username", "courtney.osinski"], ["email", "johnathan_harvey@hayes.io"], ["created_at", "2020-05-24 00:39:36.842240"], ["updated_at", "2020-05-24 00:39:36.842240"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Mr. Freddy Bernier"], ["bio", "Beware the barrenness of a busy life."], ["username", "eldora"], ["email", "rosia.weber@howebraun.net"], ["created_at", "2020-05-24 00:39:36.845016"], ["updated_at", "2020-05-24 00:39:36.845016"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Fonda Keebler"], ["bio", "Control thy passions lest they take vengence on thee."], ["username", "avis.kuphal"], ["email", "ivey@naderryan.co"], ["created_at", "2020-05-24 00:39:36.847655"], ["updated_at", "2020-05-24 00:39:36.847655"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Merrilee Gottlieb"], ["bio", "There was never a genius without a tincture of madness."], ["username", "cliff"], ["email", "jeannetta@hilllmraz.co"], ["created_at", "2020-05-24 00:39:36.850345"], ["updated_at", "2020-05-24 00:39:36.850345"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Joaquin Kris"], ["bio", "There was never a genius without a tincture of madness."], ["username", "almeda_bosco"], ["email", "dale@greenfelder.com"], ["created_at", "2020-05-24 00:39:36.853228"], ["updated_at", "2020-05-24 00:39:36.853228"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Dwayne Kunde MD"], ["bio", "Rhetoric is the art of ruling the minds of men."], ["username", "sari"], ["email", "greg_klocko@swaniawski.com"], ["created_at", "2020-05-24 00:39:36.855931"], ["updated_at", "2020-05-24 00:39:36.855931"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Sparkle Nitzsche"], ["bio", "Most people would rather give than get affection."], ["username", "odis_cronin"], ["email", "shaunna@ziemannsmith.info"], ["created_at", "2020-05-24 00:39:36.858700"], ["updated_at", "2020-05-24 00:39:36.858700"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Jesse Raynor"], ["bio", "Philosophy is the highest music."], ["username", "serina.auer"], ["email", "remona_quitzon@labadie.com"], ["created_at", "2020-05-24 00:39:36.861341"], ["updated_at", "2020-05-24 00:39:36.861341"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Miss Letty Trantow"], ["bio", "Philosophy is the highest music."], ["username", "debby"], ["email", "rhett_feest@stammbartoletti.net"], ["created_at", "2020-05-24 00:39:36.872142"], ["updated_at", "2020-05-24 00:39:36.872142"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Seymour Cummings DVM"], ["bio", "Good habits formed at youth make all the difference."], ["username", "elinore"], ["email", "jonah@rosenbaum.name"], ["created_at", "2020-05-24 00:39:36.875111"], ["updated_at", "2020-05-24 00:39:36.875111"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Mignon Kunze"], ["bio", "Only the educated are free."], ["username", "clement"], ["email", "jana.morar@homenickabbott.co"], ["created_at", "2020-05-24 00:39:36.878026"], ["updated_at", "2020-05-24 00:39:36.878026"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Madonna Murazik"], ["bio", "Only the educated are free."], ["username", "domingo_koelpin"], ["email", "erich@harris.io"], ["created_at", "2020-05-24 00:39:36.880913"], ["updated_at", "2020-05-24 00:39:36.880913"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 162], ["LIMIT", 1]]
+  [1m[36mFishingSpot Create (1.9ms)[0m  [1m[32mINSERT INTO "fishing_spots" ("name", "longitude", "image", "public_access", "user_id", "created_at", "updated_at", "latitude", "site_info") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Chautauqua Creek"], ["longitude", "-79.589919649"], ["image", "https://robohash.org/magnamoptioiusto.png?size=300x300&set=set1"], ["public_access", "Shore Fishing - Public Fishing Rights"], ["user_id", 162], ["created_at", "2020-05-24 00:39:37.291447"], ["updated_at", "2020-05-24 00:39:37.291447"], ["latitude", "42.203633417"], ["site_info", "#<Hashie::Mash url=\"http://www.dec.ny.gov/docs/fish_marine_pdf/chautauquacreek.pdf\">"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 179], ["LIMIT", 1]]
+  [1m[36mFishingSpot Create (0.3ms)[0m  [1m[32mINSERT INTO "fishing_spots" ("name", "longitude", "image", "public_access", "user_id", "created_at", "updated_at", "latitude", "site_info") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Chautauqua Creek"], ["longitude", "-79.578375466"], ["image", "https://robohash.org/quoautemomnis.png?size=300x300&set=set1"], ["public_access", "Shore Fishing - Public Fishing Rights"], ["user_id", 179], ["created_at", "2020-05-24 00:39:37.299552"], ["updated_at", "2020-05-24 00:39:37.299552"], ["latitude", "42.30582201"], ["site_info", "#<Hashie::Mash url=\"http://www.dec.ny.gov/docs/fish_marine_pdf/chautauquacreek.pdf\">"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  [1m[36mFishingSpot Create (0.3ms)[0m  [1m[32mINSERT INTO "fishing_spots" ("name", "longitude", "image", "public_access", "user_id", "created_at", "updated_at", "latitude", "site_info") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Goose Creek"], ["longitude", "-79.474890452"], ["image", "https://robohash.org/corruptidoloremquevoluptatum.png?size=300x300&set=set1"], ["public_access", "Shore Fishing - Public Fishing Rights"], ["user_id", 176], ["created_at", "2020-05-24 00:39:37.304991"], ["updated_at", "2020-05-24 00:39:37.304991"], ["latitude", "42.094907888"], ["site_info", "#<Hashie::Mash url=\"http://www.dec.ny.gov/docs/fish_marine_pdf/goosecreek.pdf\">"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 171], ["LIMIT", 1]]
+  [1m[36mFishingSpot Create (0.2ms)[0m  [1m[32mINSERT INTO "fishing_spots" ("name", "longitude", "image", "public_access", "user_id", "created_at", "updated_at", "latitude", "site_info") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Goose Creek"], ["longitude", "-79.412461551"], ["image", "https://robohash.org/perferendisdoloresest.png?size=300x300&set=set1"], ["public_access", "Shore Fishing - Public Fishing Rights"], ["user_id", 171], ["created_at", "2020-05-24 00:39:37.310201"], ["updated_at", "2020-05-24 00:39:37.310201"], ["latitude", "42.084188387"], ["site_info", "#<Hashie::Mash url=\"http://www.dec.ny.gov/docs/fish_marine_pdf/goosecreek.pdf\">"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 177], ["LIMIT", 1]]
+  [1m[36mFishingSpot Create (0.3ms)[0m  [1m[32mINSERT INTO "fishing_spots" ("name", "longitude", "image", "public_access", "user_id", "created_at", "updated_at", "latitude", "site_info") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Canadaway Creek"], ["longitude", "-79.364645774"], ["image", "https://robohash.org/nonquiperspiciatis.png?size=300x300&set=set1"], ["public_access", "Shore Fishing - Public Fishing Rights"], ["user_id", 177], ["created_at", "2020-05-24 00:39:37.315610"], ["updated_at", "2020-05-24 00:39:37.315610"], ["latitude", "42.475495688"], ["site_info", "#<Hashie::Mash url=\"http://www.dec.ny.gov/docs/fish_marine_pdf/canadawaycreek.pdf\">"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 179], ["LIMIT", 1]]
+  [1m[36mFishingSpot Create (0.2ms)[0m  [1m[32mINSERT INTO "fishing_spots" ("name", "longitude", "image", "public_access", "user_id", "created_at", "updated_at", "latitude", "site_info") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Cassadaga Creek"], ["longitude", "-79.298971392"], ["image", "https://robohash.org/ducimusvoluptatumpossimus.png?size=300x300&set=set1"], ["public_access", "Shore Fishing - Public Fishing Rights"], ["user_id", 179], ["created_at", "2020-05-24 00:39:37.320887"], ["updated_at", "2020-05-24 00:39:37.320887"], ["latitude", "42.312184901"], ["site_info", "#<Hashie::Mash url=\"http://www.dec.ny.gov/docs/fish_marine_pdf/cassadagack.pdf\">"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 167], ["LIMIT", 1]]
+  [1m[36mFishingSpot Create (0.2ms)[0m  [1m[32mINSERT INTO "fishing_spots" ("name", "longitude", "image", "public_access", "user_id", "created_at", "updated_at", "latitude", "site_info") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Clear Creek (Ellington)"], ["longitude", "-79.158538511"], ["image", "https://robohash.org/quisquameumsit.png?size=300x300&set=set1"], ["public_access", "Shore Fishing - Public Fishing Rights"], ["user_id", 167], ["created_at", "2020-05-24 00:39:37.325812"], ["updated_at", "2020-05-24 00:39:37.325812"], ["latitude", "42.265576911"], ["site_info", "#<Hashie::Mash url=\"http://www.dec.ny.gov/docs/fish_marine_pdf/clearcreekelling.pdf\">"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 177], ["LIMIT", 1]]
+  [1m[36mFishingSpot Create (0.2ms)[0m  [1m[32mINSERT INTO "fishing_spots" ("name", "longitude", "image", "public_access", "user_id", "created_at", "updated_at", "latitude", "site_info") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Clear Creek (Ellington)"], ["longitude", "-79.153304992"], ["image", "https://robohash.org/dictamagnamadipisci.png?size=300x300&set=set1"], ["public_access", "Shore Fishing - Public Fishing Rights"], ["user_id", 177], ["created_at", "2020-05-24 00:39:37.330774"], ["updated_at", "2020-05-24 00:39:37.330774"], ["latitude", "42.257507691"], ["site_info", "#<Hashie::Mash url=\"http://www.dec.ny.gov/docs/fish_marine_pdf/clearcreekelling.pdf\">"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 181], ["LIMIT", 1]]
+  [1m[36mFishingSpot Create (0.2ms)[0m  [1m[32mINSERT INTO "fishing_spots" ("name", "longitude", "image", "public_access", "user_id", "created_at", "updated_at", "latitude", "site_info") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Clear Creek (Ellington)"], ["longitude", "-79.142188487"], ["image", "https://robohash.org/repellatmolestiaenam.png?size=300x300&set=set1"], ["public_access", "Shore Fishing - Public Fishing Rights"], ["user_id", 181], ["created_at", "2020-05-24 00:39:37.335690"], ["updated_at", "2020-05-24 00:39:37.335690"], ["latitude", "42.248976693"], ["site_info", "#<Hashie::Mash url=\"http://www.dec.ny.gov/docs/fish_marine_pdf/clearcreekelling.pdf\">"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 168], ["LIMIT", 1]]
+  [1m[36mFishingSpot Create (0.2ms)[0m  [1m[32mINSERT INTO "fishing_spots" ("name", "longitude", "image", "public_access", "user_id", "created_at", "updated_at", "latitude", "site_info") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Niagara River (Lower)"], ["longitude", "-79.063987499"], ["image", "https://robohash.org/etpossimusmolestiae.png?size=300x300&set=set1"], ["public_access", "Shore Fishing"], ["user_id", 168], ["created_at", "2020-05-24 00:39:37.340508"], ["updated_at", "2020-05-24 00:39:37.340508"], ["latitude", "43.120371315"], ["site_info", "#<Hashie::Mash url=\"http://www.dec.ny.gov/outdoor/67913.html\">"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 165], ["LIMIT", 1]]
+  [1m[36mFishingSpot Create (0.2ms)[0m  [1m[32mINSERT INTO "fishing_spots" ("name", "longitude", "image", "public_access", "user_id", "created_at", "updated_at", "latitude", "site_info") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Niagara River (Lower)"], ["longitude", "-79.059249369"], ["image", "https://robohash.org/repudiandaequiaaut.png?size=300x300&set=set1"], ["public_access", "Shore Fishing - Boat Launch (Trailer Improved)"], ["user_id", 165], ["created_at", "2020-05-24 00:39:37.345319"], ["updated_at", "2020-05-24 00:39:37.345319"], ["latitude", "43.26100669"], ["site_info", "#<Hashie::Mash url=\"http://www.dec.ny.gov/outdoor/67913.html\">"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 172], ["LIMIT", 1]]
+  [1m[36mFishingSpot Create (0.2ms)[0m  [1m[32mINSERT INTO "fishing_spots" ("name", "longitude", "image", "public_access", "user_id", "created_at", "updated_at", "latitude", "site_info") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Niagara River (Lower)"], ["longitude", "-79.051309539"], ["image", "https://robohash.org/cupiditateaveniam.png?size=300x300&set=set1"], ["public_access", "Shore Fishing"], ["user_id", 172], ["created_at", "2020-05-24 00:39:37.350077"], ["updated_at", "2020-05-24 00:39:37.350077"], ["latitude", "43.214906243"], ["site_info", "#<Hashie::Mash url=\"http://www.dec.ny.gov/outdoor/67913.html\">"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 175], ["LIMIT", 1]]
+  [1m[36mFishingSpot Create (0.2ms)[0m  [1m[32mINSERT INTO "fishing_spots" ("name", "longitude", "image", "public_access", "user_id", "created_at", "updated_at", "latitude", "site_info") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Niagara River (Lower)"], ["longitude", "-79.049662499"], ["image", "https://robohash.org/perferendishiccupiditate.png?size=300x300&set=set1"], ["public_access", "Shore Fishing - Boat Launch (Trailer Improved)"], ["user_id", 175], ["created_at", "2020-05-24 00:39:37.354990"], ["updated_at", "2020-05-24 00:39:37.354990"], ["latitude", "43.174029561"], ["site_info", "#<Hashie::Mash url=\"http://www.dec.ny.gov/outdoor/67913.html\">"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 178], ["LIMIT", 1]]
+  [1m[36mFishingSpot Create (0.2ms)[0m  [1m[32mINSERT INTO "fishing_spots" ("name", "longitude", "image", "public_access", "user_id", "created_at", "updated_at", "latitude", "site_info") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Niagara River (Lower)"], ["longitude", "-79.047616105"], ["image", "https://robohash.org/molestiaeetquia.png?size=300x300&set=set1"], ["public_access", "Shore Fishing"], ["user_id", 178], ["created_at", "2020-05-24 00:39:37.360078"], ["updated_at", "2020-05-24 00:39:37.360078"], ["latitude", "43.133026069"], ["site_info", "#<Hashie::Mash url=\"http://www.dec.ny.gov/outdoor/67913.html\">"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 168], ["LIMIT", 1]]
+  [1m[36mFishingSpot Create (0.2ms)[0m  [1m[32mINSERT INTO "fishing_spots" ("name", "longitude", "image", "public_access", "user_id", "created_at", "updated_at", "latitude", "site_info") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Niagara River (Lower)"], ["longitude", "-79.046464334"], ["image", "https://robohash.org/adetet.png?size=300x300&set=set1"], ["public_access", "Shore Fishing"], ["user_id", 168], ["created_at", "2020-05-24 00:39:37.365133"], ["updated_at", "2020-05-24 00:39:37.365133"], ["latitude", "43.166763893"], ["site_info", "#<Hashie::Mash url=\"http://www.dec.ny.gov/outdoor/67913.html\">"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 167], ["LIMIT", 1]]
+  [1m[36mFishingSpot Create (0.2ms)[0m  [1m[32mINSERT INTO "fishing_spots" ("name", "longitude", "image", "public_access", "user_id", "created_at", "updated_at", "latitude", "site_info") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Conewango Creek"], ["longitude", "-79.037127689"], ["image", "https://robohash.org/autindoloremque.png?size=300x300&set=set1"], ["public_access", "Shore Fishing"], ["user_id", 167], ["created_at", "2020-05-24 00:39:37.370366"], ["updated_at", "2020-05-24 00:39:37.370366"], ["latitude", "42.186863764"], ["site_info", "#<Hashie::Mash url=\"http://www.dec.ny.gov/outdoor/26987.html\">"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 175], ["LIMIT", 1]]
+  [1m[36mFishingSpot Create (0.2ms)[0m  [1m[32mINSERT INTO "fishing_spots" ("name", "longitude", "image", "public_access", "user_id", "created_at", "updated_at", "latitude", "site_info") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Niagara River (Upper)"], ["longitude", "-79.01179447"], ["image", "https://robohash.org/iuresitvelit.png?size=300x300&set=set1"], ["public_access", "Shore Fishing - Boat Launch (Trailer Improved)"], ["user_id", 175], ["created_at", "2020-05-24 00:39:37.375452"], ["updated_at", "2020-05-24 00:39:37.375452"], ["latitude", "43.024306611"], ["site_info", "#<Hashie::Mash url=\"http://www.dec.ny.gov/outdoor/23898.html\">"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 175], ["LIMIT", 1]]
+  [1m[36mFishingSpot Create (0.2ms)[0m  [1m[32mINSERT INTO "fishing_spots" ("name", "longitude", "image", "public_access", "user_id", "created_at", "updated_at", "latitude", "site_info") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Eighteen Mile Creek"], ["longitude", "-78.966497439"], ["image", "https://robohash.org/teneturanimivoluptatem.png?size=300x300&set=set1"], ["public_access", "Shore Fishing - Public Fishing Rights"], ["user_id", 175], ["created_at", "2020-05-24 00:39:37.380324"], ["updated_at", "2020-05-24 00:39:37.380324"], ["latitude", "42.711455717"], ["site_info", "#<Hashie::Mash url=\"http://www.dec.ny.gov/docs/fish_marine_pdf/eighteenmilesouth.pdf\">"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 165], ["LIMIT", 1]]
+  [1m[36mFishingSpot Create (0.3ms)[0m  [1m[32mINSERT INTO "fishing_spots" ("name", "longitude", "image", "public_access", "user_id", "created_at", "updated_at", "latitude", "site_info") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Elm Creek"], ["longitude", "-78.964314103"], ["image", "https://robohash.org/errorautvoluptas.png?size=300x300&set=set1"], ["public_access", "Shore Fishing - Public Fishing Rights"], ["user_id", 165], ["created_at", "2020-05-24 00:39:37.386661"], ["updated_at", "2020-05-24 00:39:37.386661"], ["latitude", "42.161026511"], ["site_info", "#<Hashie::Mash url=\"http://www.dec.ny.gov/docs/fish_marine_pdf/littleconewangock.pdf\">"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  [1m[36mFishingSpot Create (0.2ms)[0m  [1m[32mINSERT INTO "fishing_spots" ("name", "longitude", "image", "public_access", "user_id", "created_at", "updated_at", "latitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Niagara River (Upper)"], ["longitude", "-78.956061065"], ["image", "https://robohash.org/estsuscipitmodi.png?size=300x300&set=set1"], ["public_access", "Shore Fishing - Boat Launch (Hand Launch)"], ["user_id", 176], ["created_at", "2020-05-24 00:39:37.391713"], ["updated_at", "2020-05-24 00:39:37.391713"], ["latitude", "42.959058568"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFishingSpot Load (0.5ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" ORDER BY "fishing_spots"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
