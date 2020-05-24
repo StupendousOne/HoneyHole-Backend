@@ -3,11 +3,14 @@ require 'soda'
 require 'pry'
 require 'faker'
 
+Favorite.destroy_all
+Review.destroy_all
 FishingSpot.destroy_all
 User.destroy_all
+Fish.destroy_all
 
 # create user seed
-20.times do
+50.times do
     User.create(name: Faker::Name.name, bio: Faker::GreekPhilosophers.quote, username: Faker::Internet.username, email: Faker::Internet.email)
 end
 
@@ -38,4 +41,15 @@ spots = response.body
 
 spots.each do |spot|
     FishingSpot.create(user_id: User.all.sample.id, name: spot.name, longitude: spot.location.longitude, latitude: spot.location.latitude, site_info: spot.site_wl, public_access: spot.public_acc, image: Faker::Avatar.image)
+end
+
+# create reviews seed data
+50.times do
+    Review.create(title: Faker::Book.title, content: Faker::Lorem.paragraph, rating: rand(0..5), fishing_spot_id: FishingSpot.all.sample.id, user_id: User.all.sample.id)
+end
+
+# create favorite seed data
+# randomly favorite a spot for each spot belonging to a user
+20.times do
+    Favorite.create(user_id: User.all.sample.id, fishing_spot_id: FishingSpot.all.sample.id)
 end
