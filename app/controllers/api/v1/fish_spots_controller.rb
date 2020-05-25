@@ -1,4 +1,4 @@
-class FishSpotsController < ApplicationController
+class Api::V1::FishSpotsController < ApplicationController
     before_action :find_fish_spot, only: [:show, :update, :destroy]
 
     def create

@@ -1,4 +1,4 @@
-class ReviewsController < ApplicationController
+class Api::V1::ReviewsController < ApplicationController
     before_action :find_review, only: [:show, :update, :destroy]
 
     def index

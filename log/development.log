@@ -21354,3 +21354,900 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 282ms (Views: 254.4ms | ActiveRecord: 24.1ms | Allocations: 223511)
 
 
+Started GET "/fish/" for ::1 at 2020-05-25 07:48:25 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FishController#index as */*
+  Parameters: {"fish"=>{}}
+  [1m[36mFish Load (0.3ms)[0m  [1m[34mSELECT "fish".* FROM "fish"[0m
+  ↳ app/controllers/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.9ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 65]]
+  ↳ app/controllers/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.3ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 66]]
+  ↳ app/controllers/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.2ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 56]]
+  ↳ app/controllers/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.2ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 57]]
+  ↳ app/controllers/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.3ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 58]]
+  ↳ app/controllers/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.2ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 59]]
+  ↳ app/controllers/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 60]]
+  ↳ app/controllers/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 61]]
+  ↳ app/controllers/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 62]]
+  ↳ app/controllers/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 63]]
+  ↳ app/controllers/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 64]]
+  ↳ app/controllers/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 67]]
+  ↳ app/controllers/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 68]]
+  ↳ app/controllers/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 69]]
+  ↳ app/controllers/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 70]]
+  ↳ app/controllers/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 71]]
+  ↳ app/controllers/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 72]]
+  ↳ app/controllers/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 73]]
+  ↳ app/controllers/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 74]]
+  ↳ app/controllers/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 75]]
+  ↳ app/controllers/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 76]]
+  ↳ app/controllers/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 77]]
+  ↳ app/controllers/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 78]]
+  ↳ app/controllers/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 79]]
+  ↳ app/controllers/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 80]]
+  ↳ app/controllers/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 81]]
+  ↳ app/controllers/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 82]]
+  ↳ app/controllers/fish_controller.rb:7:in `index'
+Completed 200 OK in 78ms (Views: 67.2ms | ActiveRecord: 11.6ms | Allocations: 64138)
+
+
+Started GET "/api/v1/fish" for ::1 at 2020-05-25 07:56:12 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant Api):
+  
+actionpack (6.0.3.1) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/fish" for ::1 at 2020-05-25 07:56:46 -0400
+  
+ActionController::RoutingError (uninitialized constant Api):
+  
+actionpack (6.0.3.1) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/fish" for ::1 at 2020-05-25 07:58:57 -0400
+  
+NameError (uninitialized constant ApplicationController
+Did you mean?  ApplicationRecord):
+  
+app/controllers/api/v1/fish_controller.rb:1:in `<main>'
+Started GET "/api/v1/fish" for ::1 at 2020-05-25 08:07:02 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::FishController#index as HTML
+  [1m[36mFish Load (0.6ms)[0m  [1m[34mSELECT "fish".* FROM "fish"[0m
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.7ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 65]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.2ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 66]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.2ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 56]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.2ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 57]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.2ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 58]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.3ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 59]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 60]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 61]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 62]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 63]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 64]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 67]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 68]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 69]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 70]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 71]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 72]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 73]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 74]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 75]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 76]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 77]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 78]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 79]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 80]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 81]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 82]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+Completed 200 OK in 78ms (Views: 58.1ms | ActiveRecord: 11.0ms | Allocations: 66284)
+
+
+Started GET "/api/v1/fish" for ::1 at 2020-05-25 08:07:09 -0400
+Processing by Api::V1::FishController#index as HTML
+  [1m[36mFish Load (0.3ms)[0m  [1m[34mSELECT "fish".* FROM "fish"[0m
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.2ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 65]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 66]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 56]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.2ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 57]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 58]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 59]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 60]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 61]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 62]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 63]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 64]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 67]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 68]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.2ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 69]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 70]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 71]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 72]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 73]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 74]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 75]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 76]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 77]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 78]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 79]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 80]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 81]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "fish_spots" ON "fishing_spots"."id" = "fish_spots"."fishing_spot_id" WHERE "fish_spots"."fish_id" = $1[0m  [["fish_id", 82]]
+  ↳ app/controllers/api/v1/fish_controller.rb:7:in `index'
+Completed 200 OK in 45ms (Views: 41.0ms | ActiveRecord: 3.9ms | Allocations: 46351)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-05-25 08:07:13 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 101]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.4ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 101]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.5ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 101]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 102]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.3ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 102]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.2ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 102]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 103]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.3ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 103]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.3ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 103]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 104]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.3ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 104]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.2ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 104]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 105]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.3ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 105]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.2ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 105]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 106]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.2ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 106]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.2ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 106]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 107]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 107]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 107]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 108]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 108]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 108]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 109]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 109]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 109]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 110]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.2ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 110]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 110]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 111]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 111]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 111]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 112]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 112]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 112]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 113]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 113]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 113]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 114]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 114]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 114]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 115]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 115]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 115]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 116]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 116]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 116]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 117]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 117]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 117]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 118]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 118]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 118]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 119]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 119]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 119]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 120]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 120]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 120]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 121]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 121]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 121]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 122]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 122]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 122]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 123]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 123]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 123]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 124]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 124]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 124]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 125]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 125]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 125]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 126]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 126]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 126]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 127]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 127]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 127]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 128]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 128]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 128]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 129]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 129]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 129]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 130]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 130]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 130]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 131]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 131]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 131]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 132]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 132]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 132]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 133]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 133]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 133]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 134]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 134]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 134]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 135]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 135]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 135]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 136]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 136]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 136]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 137]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 137]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 137]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 138]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 138]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.2ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 138]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 139]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 139]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 139]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 140]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 140]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 140]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 141]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 141]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 141]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 142]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.2ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 142]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 142]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 143]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 143]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 143]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 144]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 144]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 144]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 145]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 145]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 145]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 146]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 146]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 146]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 147]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 147]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 147]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 148]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 148]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 148]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 149]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 149]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 149]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 150]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 150]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 150]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+Completed 200 OK in 225ms (Views: 196.0ms | ActiveRecord: 23.9ms | Allocations: 214237)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-05-25 08:07:38 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 101]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.2ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 101]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 101]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 102]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 102]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 102]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 103]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 103]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 103]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 104]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 104]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 104]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 105]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 105]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 105]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 106]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 106]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 106]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 107]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 107]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 107]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 108]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 108]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 108]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 109]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 109]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 109]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 110]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 110]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 110]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 111]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 111]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 111]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 112]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 112]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 112]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 113]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 113]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 113]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 114]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 114]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 114]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 115]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 115]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 115]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 116]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 116]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 116]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 117]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 117]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 117]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 118]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 118]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 118]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 119]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 119]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 119]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 120]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 120]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 120]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 121]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 121]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 121]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 122]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 122]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 122]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 123]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 123]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 123]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 124]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 124]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 124]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 125]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 125]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.2ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 125]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 126]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 126]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 126]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 127]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 127]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 127]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 128]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 128]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 128]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 129]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 129]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.2ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 129]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 130]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 130]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 130]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 131]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 131]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 131]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 132]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 132]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 132]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 133]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 133]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 133]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 134]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 134]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 134]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 135]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.2ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 135]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 135]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 136]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 136]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 136]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 137]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 137]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 137]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 138]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 138]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 138]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 139]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 139]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 139]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 140]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 140]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 140]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 141]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 141]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 141]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 142]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 142]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 142]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 143]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 143]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 143]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 144]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 144]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 144]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 145]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 145]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 145]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 146]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 146]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 146]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 147]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 147]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 147]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 148]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 148]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 148]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 149]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 149]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 149]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 150]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "reviews" ON "fishing_spots"."id" = "reviews"."fishing_spot_id" WHERE "reviews"."user_id" = $1[0m  [["user_id", 150]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+  [1m[36mFishingSpot Load (0.1ms)[0m  [1m[34mSELECT "fishing_spots".* FROM "fishing_spots" INNER JOIN "favorites" ON "fishing_spots"."id" = "favorites"."fishing_spot_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 150]]
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `index'
+Completed 200 OK in 217ms (Views: 190.9ms | ActiveRecord: 22.3ms | Allocations: 223217)
+
+

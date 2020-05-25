@@ -1,4 +1,4 @@
-class FishController < ApplicationController
+class Api::V1::FishController < ApplicationController
     before_action :find_fish, only: [:show, :update, :destroy]
 
     def index
