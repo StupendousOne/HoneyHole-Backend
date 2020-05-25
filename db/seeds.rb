@@ -27,8 +27,9 @@ res_ary = JSON.parse(res)["data"]
 fish_ary = res_ary.select { |fish| fish["FBname"] != nil && fish["GameFish"] = -1 && fish["Fresh"] = -1 }
 # create seed data
 fish_ary.each do |fish|
-    Fish.create(species: fish["FBname"], description: fish["Comments"])
+    Fish.create(species: fish["FBname"], description: fish["Comments"], image: fish["image"])
 end
+
 
 #FISHING SPOT API endpoint
 SPOT_url = "https://data.ny.gov/resource/f4vj-p8y5.json"
