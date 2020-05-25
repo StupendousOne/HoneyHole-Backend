@@ -30,6 +30,7 @@ fish_ary.each do |fish|
     Fish.create(species: fish["FBname"], description: fish["Comments"], image: fish["image"])
 end
 
+
 #FISHING SPOT API endpoint
 SPOT_url = "https://data.ny.gov/resource/f4vj-p8y5.json"
 # have to set up account to get app token and thereby permission to ping/request
