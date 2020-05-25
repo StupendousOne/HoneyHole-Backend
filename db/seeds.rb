@@ -8,6 +8,7 @@ Review.destroy_all
 FishingSpot.destroy_all
 User.destroy_all
 Fish.destroy_all
+FishSpot.destroy_all
 
 # create user seed
 50.times do
@@ -52,6 +53,12 @@ end
 
 # create favorite seed data
 # randomly favorite a spot for each spot belonging to a user
-20.times do
+50.times do
     Favorite.create(user_id: User.all.sample.id, fishing_spot_id: FishingSpot.all.sample.id)
+end
+
+#create FishSpots seed data
+# randomly assign fish to fishing spots
+50.times do
+    FishSpot.create(fish_id: Fish.all.sample.id, fishing_spot_id: FishingSpot.all.sample.id)
 end
