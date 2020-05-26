@@ -12,7 +12,7 @@ FishSpot.destroy_all
 
 # create user seed
 50.times do
-    User.create(name: Faker::Name.name, bio: Faker::GreekPhilosophers.quote, username: Faker::Internet.username, email: Faker::Internet.email)
+    User.create(name: Faker::Name.name, bio: Faker::GreekPhilosophers.quote, username: Faker::Internet.username, email: Faker::Internet.email, is_active: true)
 end
 
 #FISH API
@@ -27,7 +27,7 @@ res_ary = JSON.parse(res)["data"]
 fish_ary = res_ary.select { |fish| fish["FBname"] != nil && fish["GameFish"] = -1 && fish["Fresh"] = -1 }
 # create seed data
 fish_ary.each do |fish|
-    Fish.create(species: fish["FBname"], description: fish["Comments"], image: fish["image"])
+    Fish.create(species: fish["FBname"], description: fish["Comments"], image: fish["image"], is_active: true)
 end
 
 
@@ -44,7 +44,7 @@ spots = response.body
 # iterate over spots to create new records with API data
 # TODO needs real lake/river images to replace Faker Avatar images
 spots.each do |spot|
-    FishingSpot.create(user_id: User.all.sample.id, name: spot.name, longitude: spot.location.longitude, latitude: spot.location.latitude, site_info: spot.site_wl, public_access: spot.public_acc, image: Faker::Avatar.image)
+    FishingSpot.create(user_id: User.all.sample.id, name: spot.name, longitude: spot.location.longitude, latitude: spot.location.latitude, site_info: spot.site_wl, public_access: spot.public_acc, image: Faker::Avatar.image, is_active: true)
 end
 
 # create reviews seed data

@@ -34,13 +34,15 @@ class Api::V1::FishController < ApplicationController
     end
 
     def destroy
-        
-        render :json => { :message => "Succesful." }
+        @fish.is_active = false
+        if(@fish.save())
+            render :json => { :message => "Succesful." }
+        end
     end
 
     private
     def fish_params
-        params.require(:fish).permit(:species,:description)
+        params.require(:fish).permit(:species,:description,:is_active)
     end
 
     def find_fish

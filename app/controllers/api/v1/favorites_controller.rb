@@ -11,6 +11,7 @@ class Api::V1::FavoritesController < ApplicationController
     end
 
     def destroy
+        @favorite.destroy()
         render :json => { :message => "Succesful." }
     end
 
