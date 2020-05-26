@@ -33,12 +33,15 @@ class Api::V1::FishingSpotsController < ApplicationController
     end
 
     def destroy
-        render :json => { :message => "Succesful." }
+        @fishing_spot.is_active = false
+        if(@fishing_spot.save())
+            render :json => { :message => "Succesful." }
+        end
     end
 
     private
     def fishing_spot_params
-        params.require(:fishing_spot).permit(:name,:image,:public_access,:site_info,:latitude,:longitude,:user_id)
+        params.require(:fishing_spot).permit(:name,:image,:public_access,:site_info,:latitude,:longitude,:user_id,:is_active)
     end
 
     def find_fishing_spot

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_23_193650) do
+ActiveRecord::Schema.define(version: 2020_05_26_073400) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2020_05_23_193650) do
     t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "is_active"
   end
 
   create_table "fish_spots", force: :cascade do |t|
@@ -50,6 +51,7 @@ ActiveRecord::Schema.define(version: 2020_05_23_193650) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "latitude"
     t.string "site_info"
+    t.boolean "is_active"
     t.index ["user_id"], name: "index_fishing_spots_on_user_id"
   end
 
@@ -72,6 +74,7 @@ ActiveRecord::Schema.define(version: 2020_05_23_193650) do
     t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "is_active"
   end
 
   add_foreign_key "favorites", "fishing_spots"

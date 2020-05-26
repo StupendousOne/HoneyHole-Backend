@@ -34,13 +34,15 @@ class Api::V1::UsersController < ApplicationController
     end
 
     def destroy
-        
-        render :json => { :message => "Succesful." }
+        @user.is_active = false
+        if(@user.save())
+            render :json => { :message => "Succesful." }
+        end
     end
 
     private
     def user_params
-        params.require(:user).permit(:name,:bio,:username,:email)
+        params.require(:user).permit(:name,:bio,:username,:email,:is_active)
     end
 
     def find_user
