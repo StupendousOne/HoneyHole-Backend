@@ -42,7 +42,7 @@ class Api::V1::FishController < ApplicationController
 
     private
     def fish_params
-        params.require(:fish).permit(:species,:description,:is_active)
+        params.require(:fish).permit(:species,:description,:is_active,:image)
     end
 
     def find_fish
