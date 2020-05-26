@@ -3,7 +3,7 @@ class Api::V1::ReviewsController < ApplicationController
 
     def index
         @reviews = Review.all
-        render :json => @reviews, status: :ok
+        render :json => @reviews, include: [:user, :reviewed_fishing_spots], status: :ok
     end
 
     def create
