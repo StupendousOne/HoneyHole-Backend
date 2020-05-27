@@ -27,9 +27,8 @@ gem 'rack-cors'
 #
 # Use rest client gem to pull api data for seeding
 gem 'rest-client'
-
-# Use rest client gem to pull api data for seeding
 gem 'soda-ruby'
+gem 'unsplash'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

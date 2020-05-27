@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_26_073400) do
+ActiveRecord::Schema.define(version: 2020_05_27_153252) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 2020_05_26_073400) do
     t.string "latitude"
     t.string "site_info"
     t.boolean "is_active"
+    t.string "image_small"
     t.index ["user_id"], name: "index_fishing_spots_on_user_id"
   end
 
