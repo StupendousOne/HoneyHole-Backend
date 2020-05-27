@@ -32,7 +32,7 @@ spots = response.body
 
 # iterate over spots to create new records with API data
 spots.each do |spot|
-    fs = FishingSpot.new(user_id: User.all.sample.id, name: spot.name, longitude: spot.location.longitude, latitude: spot.location.latitude, public_access: spot.public_acc, image: lake_res.sample.urls.regular, is_active: true)
+    fs = FishingSpot.new(user_id: User.all.sample.id, name: spot.name, longitude: spot.location.longitude, latitude: spot.location.latitude, public_access: spot.public_acc, image: lake_res.sample.urls.regular, image_small: lake_res.sample.urls.small, is_active: true)
     if !spot.site_wl
         fs.save!
     else
