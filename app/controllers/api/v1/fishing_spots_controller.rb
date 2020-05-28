@@ -3,7 +3,7 @@ class Api::V1::FishingSpotsController < ApplicationController
 
     def index
         @fishing_spots = FishingSpot.all
-        render :json => @fishing_spots, include: :fish, status: :ok
+        render :json => @fishing_spots, include: [:fish, :fish_spots], status: :ok
     end
 
     def create
