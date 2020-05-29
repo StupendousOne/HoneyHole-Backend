@@ -14,7 +14,7 @@ class Api::V1::FishSpotsController < ApplicationController
         fish_id = @fish_spot.fish_id
         fishing_spot = @fish_spot.fishing_spot_id
         @fish_spot.destroy()
-        render :json => { :message => "Fish #{fish_id} and FishingSpot #{fishing_spot} are no longer connected" }
+        render :json => { message: "Fish #{fish_id} and FishingSpot #{fishing_spot} are no longer connected", fishing_spot_id: fishing_spot }
     end
 
     private
