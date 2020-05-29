@@ -11,13 +11,12 @@ class Api::V1::FavoritesController < ApplicationController
     end
 
     def destroy
-        @favorite.destroy()
+        @favorite.destroy
         render :json => { :message => "Succesful." }
     end
 
     private
     def favorite_params
-    t.bigint "fishing_spot_id", null: false
         params.require(:favorite).permit(:fishing_spot_id,:user_id)
     end
 

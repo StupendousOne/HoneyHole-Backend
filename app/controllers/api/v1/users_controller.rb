@@ -4,7 +4,7 @@ class Api::V1::UsersController < ApplicationController
     def index
         @users = User.all
         # include his favorites, reviewed spots, and reviews
-        render :json => @users, include: [:reviews, :reviewed_fishing_spots, :favorite_fishing_spots], status: :ok
+        render :json => @users, include: [:reviews, :reviewed_fishing_spots, :favorite_fishing_spots, :favorites], status: :ok
     end
 
     def create
